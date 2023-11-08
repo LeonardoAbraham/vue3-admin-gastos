@@ -47,4 +47,11 @@
         background-color: var(--azul);
     }
 
+    header h1 {
+        padding: 3rem 0;
+        margin: 0;
+        color: var(--blanco);
+        text-align: center;
+    }
+
 </style>
