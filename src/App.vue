@@ -2,9 +2,49 @@
 </script>
 
 <template>
-    <h1>Template</h1>
+    <div>
+        <header>
+            <h1>Planificador de Gastos</h1>
+        </header>
+    </div>
 </template>
 
-<style scoped>
+<style>
+    :root {
+        --azul:#3B82f6;
+        --blanco:#FFF;
+        --gris-claro:#F5F5F5;
+        --gris:#94A3B8;
+        --gris:#000;
+    }
+
+    html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-size: 1.6rem;
+        font-family: "Lato", sans-serif;
+        background-color: var(--gris-claro);
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    header {
+        background-color: var(--azul);
+    }
 
 </style>
