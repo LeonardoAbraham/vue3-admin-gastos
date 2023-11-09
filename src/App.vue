@@ -32,7 +32,8 @@
         --blanco:#FFF;
         --gris-claro:#F5F5F5;
         --gris:#94A3B8;
-        --gris:#000;
+        --gris-oscuro:#737577;
+        --negro:#000;
     }
 
     html {
