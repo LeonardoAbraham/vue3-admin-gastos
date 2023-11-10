@@ -13,6 +13,14 @@
     const presupuesto = ref(0);
     const disponible = ref(0);
 
+    const gasto = reactive({
+        nombre: '',
+        cantidad: '',
+        categoria: '',
+        id:null,
+        fecha: Date.now
+    })
+
     const definirPresupuesto = (cantidad) => {
         presupuesto.value = cantidad;
         disponible.value = cantidad;
@@ -64,6 +72,9 @@
                 v-if="modal.mostrar"
                 @ocultar-modal="ocultarModal"
                 :modal="modal"
+                v-modal:nombre="gasto.nombre"
+                v-modal:cantidad="gasto.cantidad"
+                v-modal:categoria="gasto.categoria"
             />
         </main>
     </div>
