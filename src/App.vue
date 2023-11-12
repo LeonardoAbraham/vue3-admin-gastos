@@ -18,7 +18,7 @@
         cantidad: '',
         categoria: '',
         id:null,
-        fecha: Date.now
+        fecha: Date.now()
     })
 
     const definirPresupuesto = (cantidad) => {
@@ -72,9 +72,9 @@
                 v-if="modal.mostrar"
                 @ocultar-modal="ocultarModal"
                 :modal="modal"
-                v-modal:nombre="gasto.nombre"
-                v-modal:cantidad="gasto.cantidad"
-                v-modal:categoria="gasto.categoria"
+                v-model:nombre="gasto.nombre"
+                v-model:cantidad="gasto.cantidad"
+                v-model:categoria="gasto.categoria"
             />
         </main>
     </div>
