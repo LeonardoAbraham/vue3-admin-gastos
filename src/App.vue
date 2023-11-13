@@ -21,6 +21,8 @@
         fecha: Date.now()
     })
 
+    const gastos = ref([])
+
     const definirPresupuesto = (cantidad) => {
         presupuesto.value = cantidad;
         disponible.value = cantidad;
@@ -42,8 +44,10 @@
     }
 
     const guardarGasto = () => {
-        console.log('Desde App.vue')
-        console.log(gasto)
+        gastos.value.push({
+            ...gasto,
+            id: 123
+        })
     }
 
 
