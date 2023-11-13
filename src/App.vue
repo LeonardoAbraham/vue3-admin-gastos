@@ -41,6 +41,11 @@
         }, 300);
     }
 
+    const guardarGasto = () => {
+        console.log('Desde App.vue')
+        console.log(gasto)
+    }
+
 
 </script>
 
@@ -71,6 +76,7 @@
             <Modal 
                 v-if="modal.mostrar"
                 @ocultar-modal="ocultarModal"
+                @guardar-gasto="guardarGasto"
                 :modal="modal"
                 v-model:nombre="gasto.nombre"
                 v-model:cantidad="gasto.cantidad"
