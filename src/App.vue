@@ -64,10 +64,21 @@
     }
 
     const guardarGasto = () => {
-        gastos.value.push({
-            ...gasto,
-            id: generarId()
-        })
+
+        if(gasto.id) {
+            //editando
+            const { id } = gasto
+            const i = gasto.value.findIndex((gasto => gasto.id === id))
+            gastos.value[i] = {...gasto}
+        }
+        else {
+            //registro nuevo
+            gastos.value.push({
+                ...gasto,
+                id: generarId()
+            })
+        }
+        
 
         ocultarModal()
 
