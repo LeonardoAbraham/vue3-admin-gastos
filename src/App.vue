@@ -34,6 +34,15 @@
         deep:true
     })
 
+    watch(modal, ()=> {
+        if(!modal.mostrar){
+            //Reiniciar el objeto
+            reiniciarStateGasto()
+        }
+    }, {
+        deep: true
+    })
+
     const definirPresupuesto = (cantidad) => {
         presupuesto.value = cantidad;
         disponible.value = cantidad;
@@ -62,6 +71,10 @@
 
         ocultarModal()
 
+        reiniciarStateGasto()
+    }
+
+    const reiniciarStateGasto = () => {
         //Reiniciar el objeto
         Object.assign(gasto, {
             nombre: '',
