@@ -102,6 +102,13 @@
         mostrarModal()
     }
 
+    const eliminarGasto = () => {
+        if(confirm('Eliminar?')){
+            gastos.value = gastos.value.filter(gastoState => gastoState.id !== gasto.id)
+            ocultarModal()
+        }
+    }
+
 </script>
 
 <template>
@@ -145,6 +152,7 @@
                 v-if="modal.mostrar"
                 @ocultar-modal="ocultarModal"
                 @guardar-gasto="guardarGasto"
+                @eliminar-gasto="eliminarGasto"
                 :modal="modal"
                 :disponible="disponible"
                 :id="gasto.id"
