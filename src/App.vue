@@ -59,7 +59,6 @@
         }
 
         const gastosStorage = localStorage.getItem('gastos')
-
         if(gastosStorage){
             gastos.value = JSON.parse(gastosStorage)
         }
@@ -139,6 +138,13 @@
         return gastos.value
     })
 
+    const resetApp = () => {
+        if(confirm('¿Deseas reiniciar presupuesto y gastos?')){
+            gastos.value = []
+            presupuesto.value = 0
+        }
+    }
+
 </script>
 
 <template>
@@ -155,6 +161,7 @@
                     :presupuesto="presupuesto"
                     :disponible="disponible"
                     :gastado="gastado"
+                    @reset-app="resetApp"
                 />
             </div>
         </header>
