@@ -1,5 +1,6 @@
 <script setup>
-    import imagen from '../assets/img/grafico.jpg'
+    import "vue3-circle-progress/dist/circle-progress.css";
+    import CircleProgress from "vue3-circle-progress";
     import { formatearCantidad } from '../helpers'
 
     const props = defineProps({
@@ -23,10 +24,14 @@
 <template>
     <div class="dos-columnas">
         <div class="contenedor-grafico">
-            <img 
-                :src="imagen" 
-                alt=""
-            >
+            <CircleProgress 
+                :percent="50"
+                :size="250"
+                :border-width="30"
+                :border-bg-width="30"
+                fill-color="#3B82F6"
+                empty-color="#E1E1E1"
+            />
         </div>
         <div class="contenedor-presupuesto">
             <button 
