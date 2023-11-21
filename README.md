@@ -16,4 +16,4 @@ npm run dev
 ```
 
 ## Imagenes del proyecto
-![Image text]()
+![Image text](https://github.com/LeonardoAbraham/vue3-admin-gastos/blob/main/public/imgProyecto.png)
